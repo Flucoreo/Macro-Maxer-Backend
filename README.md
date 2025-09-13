@@ -1,2 +1,2 @@
 # Macro-Maxer-Backend
-AI powered nutrition analysis, backend
+AI powered nutrition analysis, backend.
