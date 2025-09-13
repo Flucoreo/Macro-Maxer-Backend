@@ -1,0 +1,22 @@
+# Python virtual environments
+venv/
+.env
+.env3
+.env/
+.env3/
+env/
+bin/
+lib/
+include/
+Scripts/
+
+__pycache__/
+*.pyc
+
+pyvenv.cfg
+
+# redis queue 
+dump.rdb
+
+# sqlite database
+database.db
