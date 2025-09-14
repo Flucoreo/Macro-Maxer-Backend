@@ -13,6 +13,7 @@ from app.config import get_settings
 load_dotenv()
 redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
+redis_password = os.getenv('REDIS_PASSWORD')
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
@@ -37,7 +38,7 @@ async def startup_event():
     '''
     Connect to redis on start up
     '''
-    app.state.redis = Redis(host=redis_host, port=redis_port)
+    app.state.redis = Redis(host=redis_host, port=redis_port, password=redis_password)
 
 @app.on_event("shutdown")
 async def stutdown_event():
