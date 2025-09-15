@@ -39,6 +39,7 @@ async def startup_event():
     Connect to redis on start up
     '''
     app.state.redis = Redis(host=redis_host, port=redis_port, password=redis_password)
+    # app.state.redis = Redis(host=redis_host, port=redis_port)
 
 @app.on_event("shutdown")
 async def stutdown_event():
